@@ -22,6 +22,7 @@ import {
 import { Input } from "@nextui-org/react";
 import { Link } from "react-router-dom";
 import { Outlet } from "react-router-dom";
+import logo from '../assets/tedx.png'
 
 export default function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -58,7 +59,7 @@ export default function App() {
         <NavbarBrand>
           <div className="logo__container">
             <Link color="foreground" to="/">
-              <img src='../src/assets/tedx.png' alt='tedx' />
+              <img src={logo} alt='tedx' />
             </Link>
           </div>
         </NavbarBrand>
@@ -91,7 +92,7 @@ export default function App() {
             <Button onPress={onOpen} className="register__button">
               REGISTER
             </Button>
-            <Modal isOpen={isOpen} onOpenChange={onOpenChange} isDismissable={false} isKeyboardDismissDisabled={true} style={{ backgroundColor: "#1D1D1D", color: "white" }}>
+            <Modal isOpen={isOpen} onOpenChange={onOpenChange} isDismissable={false} isKeyboardDismissDisabled={true} style={{ backgroundColor: "#1D1D1D", color: "white" }} placement="center">
               <ModalContent>
                 {(onClose) => (
                   <>
