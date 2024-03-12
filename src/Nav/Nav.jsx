@@ -58,7 +58,7 @@ export default function App() {
         <NavbarBrand>
           <div className="logo__container">
             <Link color="foreground" to="/">
-              <img src="../src/assets/tedx.png" alt="logo" />
+              <img src='../src/assets/tedx.png' alt='tedx' />
             </Link>
           </div>
         </NavbarBrand>
