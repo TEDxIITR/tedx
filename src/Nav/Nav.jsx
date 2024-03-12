@@ -129,40 +129,7 @@ export default function App() {
         </div>
       )}
     </div>
-          {/* <NavbarItem>
-            <Button onPress={onOpen} className="register__button">
-              REGISTER
-            </Button>
-            <Modal isOpen={isOpen} onOpenChange={onOpenChange} isDismissable={true} isKeyboardDismissDisabled={true} style={{ backgroundColor: "#1D1D1D", color: "white" }} placement="center" scrollBehavior="inside">
-              <ModalContent>
-                {(onClose) => (
-                  <>
-                    <ModalHeader className="flex flex-col gap-1">Have a Coupon?</ModalHeader>
-                    <ModalBody style={{ display: "flex", flexDirection: "column", justifyContent: "center", gap: "32px", alignItems: "center" }}>
-                      <Input type="text" placeholder="Enter your referral code" variant="flat" size="lg" onChange={getData} style={{ caretColor: "black" }} />
-                      {visible ? <p>Yay! you got 100Rs Off</p> : null}
-                      {display ? <p>Yay! you got 200Rs Off</p> : null}
-                      {visible ? (
-                        <a href="https://rzp.io/l/St68FMP7P">
-                          <Button className="register__button">Pay</Button>
-                        </a>
-                      ) : display ? (
-                        <a href="https://rzp.io/l/VO7158w">
-                          <Button className="register__button">Pay</Button>
-                        </a>
-                      ) : (
-                        <a href="https://rzp.io/l/H0jMjBi7">
-                          <Button className="register__button">Pay</Button>
-                        </a>
-                      )}
-                    </ModalBody>
-                    <ModalFooter>
-                    </ModalFooter>
-                  </>
-                )}
-              </ModalContent>
-            </Modal> */}
-
+          
       <NavbarMenu className="dropdown__menu" >
         {menuItems.map((item, index) => (
           <NavbarMenuItem key={`${item}-${index}`}>
