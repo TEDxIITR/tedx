@@ -47,10 +47,17 @@ function Register() {
     return (
       <>
       <div className="register__page">
+      <div style={{display:'flex' , justifyContent:'center' , flexDirection:'column' , alignItems:'center'}}>
+
+      <h1 className="booking__cta">Book your seat for <b style={{color:'#EB0028'}}>599</b> Only</h1>
+      <a href="https://rzp.io/l/H0jMjBi7">
+                          <button className="pay__button"  >Pay</button>
+                        </a>
+      </div>
       <div>
       <h1 style={{fontSize:'28px', color:'white' , fontWeight:'600'}}>Have a Coupon Code?</h1>
       <div className="coupon__container">
-        <input type="text" style={{height:'100%' , flex:'1' , width:'70%' , color:'white' , caretColor:'white'}} placeholder="Coupon Code" className="coupon__input" onChange={getData} />
+        <input type="text" style={{height:'100%' , flex:'1' , width:'70%' , color:'white' , caretColor:'white' , paddingLeft:'10px'}} placeholder="Coupon Code" className="coupon__input" onChange={getData} />
         <button className="register__button" style={{width:'30%'}} onClick={checkCoupon} >Apply</button>
       </div>
         {invalid ? <p style={{color:'#EB0028'}}>Invalid Coupon</p> : null}
@@ -71,9 +78,7 @@ function Register() {
                           <button className="pay__button" >Pay</button>
                         </a>
                       ):(
-                        <a href="https://rzp.io/l/H0jMjBi7">
                           <button className="pay__button"  >Pay</button>
-                        </a>
                       )}
       </div>
       <div>

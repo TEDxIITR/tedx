@@ -139,11 +139,13 @@
 .speaker__info{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: start;
     align-items: start;
     gap:16px;
     width:70%;
+    min-width: 50%;
     padding-left: 1rem;
+    height: 40vh;
 }
 
 .speaker__timing{
@@ -199,6 +201,13 @@
 
 }
 
+
+@media(max-width:780px){
+
+    
+
+}
+
 @media(max-width:676px){
     .speakers__section{
         margin-left: 1rem;
@@ -243,7 +252,7 @@
     }
 
     .speaker__parent{
-        margin-left: 0.5rem;
+        margin-left: 1.5rem;
     }
 
 }

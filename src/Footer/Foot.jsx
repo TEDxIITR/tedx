@@ -40,6 +40,9 @@ function Footer() {
          <h1 style={{color:'white' , fontWeight:'600' , fontSize:'16px'}}>TEDxIITRoorkee Recorded</h1>
          <h1 style={{color:'white' , fontWeight:'500' , fontSize:'14px' , maxWidth:'240px'}}>Watch the latest <b>TEDxIITRoorkee</b> events , on your Screen</h1>
          </div>
+         <div>
+          <p style={{color:'#555555'}}>T&C: Seats for the talks are available  on first come first serve basis</p>
+         </div>
        </div>
       </>
     )

@@ -29,7 +29,7 @@ function Hero() {
       time:'10:00 AM',
       image: sand,
       name :'Manisha and Saurabh',
-      bio:"In a captivating display of creativity and skill, Manisha and Saurabh take the stage, armed with nothing but a canvas of sand and a keen imagination. With each graceful movement of their hands, intricate images begin to materialize, as if by magic, before the eyes of the audience."
+      bio:"Manisha and Saurabh take the stage, armed with nothing but a canvas of sand and a keen imagination. With each graceful movement of their hands, intricate images begin to materialize,before the eyes of the audience."
      },
     {
      index:0,
@@ -64,14 +64,14 @@ function Hero() {
       time:'5:00 PM',
       image: wajahat,
       name :'Wajahat Hasan',
-      bio:"Since 2014, Wajahat Hasan has mesmerized audiences with soulful Sufi melodies. Trained by legends like Ustad Sabri Khan, he's become a torchbearer of Sufi music, with a versatile style spanning genres. Additionally, he's lent his voice to characters like Suneo in Doraemon."
+      bio:" Wajahat Hasan has mesmerized audiences with soulful Sufi melodies. Trained by legends like Ustad Sabri Khan, he's become a torchbearer of Sufi music, with a versatile style spanning genres. Additionally, he's lent his voice to characters like Suneo in Doraemon."
      },
      {
       index:5,
       time:'5:45 PM',
       image: jai,
       name :'Jai Madaan',
-      bio:"Jai Madaan is a renowned spiritual guide.With her expertise and compassionate guidance, she empowers individuals to navigate life's challenges and discover their true purpose. Through her teachings and motivational speeches, Jai inspires countless souls to embrace positivity and lead a fulfilling life."
+      bio:"Jai Madaan is a renowned spiritual guide.Her expertise and compassionate guidance, she empowers individuals to navigate life's challenges and discover their true purpose. Through her teachings and motivational speeches, Jai inspires countless souls to lead a fulfilling life."
      },
      {
       index:6,
@@ -153,7 +153,7 @@ function Hero() {
           <div  ref= {item.index === 0 ? elementRef : null}  key={item.name} className={` speaker__div ${isVisible ? 'animate__animated animate__zoomIn' : ''}`}>
             <div className='speaker__info'>
               <p  className='speaker__timing'>{item.time}</p>
-              <p  className='speaker__name'>{item.name}</p>
+              <p  className='speaker__name' style={{color:'#EB0028'}}>{item.name}</p>
               <p  className='speaker__bio'>{item.bio}</p>
             </div>
             <div  className='image__div'>
