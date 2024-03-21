@@ -49,3 +49,9 @@ input{
     padding-left: 32px;
    }
 }
+
+@media (max-width: 479px) {
+    .register__page{
+     padding-left: 12px;
+    }
+ }
