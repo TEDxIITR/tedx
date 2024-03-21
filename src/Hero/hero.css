@@ -128,8 +128,7 @@
 }
 
 .speaker__div{
-    max-width:70vw;
-    width: 70vw;
+    width: 100%;
     height: 300px;
     border-left:1px solid white;
     display: flex;
@@ -158,7 +157,7 @@
 }
 
 .speaker__bio{
-    color:rgb(133, 133, 133);
+    color:white;
     font-size: 14px;
 
 }
@@ -179,14 +178,15 @@
 }
 
 .image__div{
-    width: 30%;
-    height: 300px;
+    width: auto;
+    margin:0 auto;
+    height: 100%;
+    overflow: hidden;
 }
 .aman__image{
+    display: block;
     width: 100%;
-    height: 100%;
-    object-position: top;
-    object-fit: cover;
+    height: auto;
     min-width: 150px;
 }
 

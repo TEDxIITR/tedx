@@ -2,7 +2,12 @@
     background-color: #0E0E0E;
     font-family: "Poppins", sans-serif;
     --animate-duration: 1500ms;
-  }
+}
+
+body{
+    max-width: 1600px;
+    margin:0 auto;
+}
 
 .navbar{
     background-color: #0E0E0E;
@@ -56,7 +61,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    margin-left: 750px ;
+    margin-left: 920px ;
 }
 
 
@@ -116,9 +121,36 @@ body.active-modal {
     gap:32px;
     justify-content: space-around;
 }
+
+@media(max-width:1540px){
+    .links{
+        margin-left:870px
+    }
+}
+
+
+@media(max-width:1497px){
+    .links{
+        margin-left:800px
+    }
+}
+
+@media(max-width:1422px){
+    .links{
+        margin-left:750px
+    }
+}
+
+
 @media(max-width:1388px){
     .links{
         margin-left:700px
+    }
+}
+
+@media(max-width:1319px){
+    .links{
+        margin-left:650px
     }
 }
 
