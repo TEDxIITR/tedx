@@ -10,23 +10,22 @@ import {
   NavbarMenu,
   NavbarMenuItem,
 } from "@nextui-org/react";
-import {
-  Button,
-  useDisclosure,
-} from "@nextui-org/react";
-import { Input } from "@nextui-org/react";
+
 import { Link } from "react-router-dom";
 import { Outlet } from "react-router-dom";
 import logo from '../assets/tedx.png'
 
 export default function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const { isOpen, onOpen, onOpenChange } = useDisclosure();
   const [data, setData] = useState(null);
   const [visible, setVisible] = useState(false);
   const [display, setDisplay] = useState(false);
 
   const [modal, setModal] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen)
+  }
 
   const toggleModal = () => {
     setModal(!modal);
@@ -54,11 +53,21 @@ export default function App() {
     }
   }
 
-  const menuItems = ["PREVIOUS EVENTS", "SPEAKERS", "TEAM", "ABOUT US"];
+  const menuItems = [{
+    name:'PREVIOUS EVENTS',
+    link:'/previous'
+  },{
+    name:'TEAM',
+    link:'/team'
+  }
+];
 
   return (
-    <Navbar onMenuOpenChange={setIsMenuOpen} className="navbar" style={{ margin: "0" }}>
-      <NavbarContent>
+    <div>
+
+
+    <Navbar onMenuOpenChange={setIsMenuOpen} className="navbar" >
+      <NavbarContent style={{margin:'0'}}>
         <NavbarMenuToggle
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
           className="sm:hidden icon"
@@ -72,62 +81,26 @@ export default function App() {
         </NavbarBrand>
       </NavbarContent>
       <NavbarContent className="links" justify="center">
-        <div style={{ display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "center", gap: "16px" }}>
           <NavbarItem className="nav__link">
-            <Link color="foreground" to="/">
+            <Link color="foreground" to="/previous" >
               PREVIOUS EVENTS
             </Link>
           </NavbarItem>
+          
           <NavbarItem className="nav__link">
-            <Link color="foreground" to="/shop">
-              SPEAKERS
-            </Link>
-          </NavbarItem>
-          <NavbarItem className="nav__link">
-            <Link color="foreground" to="/cart">
+            <Link color="foreground" to="/team" >
               TEAM
             </Link>
           </NavbarItem>
-          <NavbarItem className="nav__link">
-            <Link color="foreground" to="/cart">
-              ABOUT US
-            </Link>
-          </NavbarItem>
-        </div>
       </NavbarContent>
 
       <div>
-      <button onClick={toggleModal} className="register__button">
-        REGISTER
-      </button>
+      <Link to='/register'>
 
-      {modal && (
-        <div className="modal">
-          <div onClick={toggleModal} className="overlay"></div>
-          <div className="modal-content">
-          <label htmlFor="text" style={{color:'white' , fontSize:'1.25rem'}}>Have a Coupon?</label>
-          <Input type="text" placeholder="Coupon Code" variant="flat" size="lg" onChange={getData} style={{ caretColor: "black" }} />
-                      {visible ? <p style={{color:'white'}}>Yay! you got 100Rs Off</p> : null}
-                      {display ? <p style={{color:'white'}}>Yay! you got 200Rs Off</p> : null}
-                      {visible ? (
-                        <a href="https://rzp.io/l/St68FMP7P">
-                          <Button className="register__button">Pay</Button>
-                        </a>
-                      ) : display ? (
-                        <a href="https://rzp.io/l/VO7158w">
-                          <Button className="register__button">Pay</Button>
-                        </a>
-                      ) : (
-                        <a href="https://rzp.io/l/H0jMjBi7">
-                          <Button className="register__button">Pay</Button>
-                        </a>
-                      )}
-            <button className="close-modal" onClick={toggleModal} style={{color:'white'}}>
-              CLOSE
-            </button>
-          </div>
-        </div>
-      )}
+      <button onClick={toggleModal} className="register__button" style={{marginLeft:'32px'}}>
+         BUY TICKET
+      </button>
+      </Link>
     </div>
           
       <NavbarMenu className="dropdown__menu" >
@@ -138,14 +111,17 @@ export default function App() {
               className="w-full"
               style={{ color: "white" }}
               size="lg"
-            >
-              {item}
+              to={item.link}
+              onClick={toggleModal}
+              >
+              {item.name}
             </Link>
           </NavbarMenuItem>
         ))}
       </NavbarMenu>
       <Outlet />
     </Navbar>
+  </div>
   );
 }
 

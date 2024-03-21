@@ -1,0 +1,59 @@
+.team__container{
+    min-height: 100vh;
+    width: 100%;
+    padding:64px;
+    display: flex;
+    flex-direction: column;
+}
+
+.tedx__members{
+    font-size:32px;
+     color:white ;
+      font-weight:600;
+}
+
+.member__card {
+    width: 274px;
+    height: 338px;
+    background-color: #1A1A1A;
+    border-top: 0.5px solid transparent;
+    border-image: linear-gradient(to right, transparent 0%, rgb(154, 151, 151) 40%, rgb(154, 151, 151) 60%, transparent 100%);
+    border-image-slice: 1;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:16px;
+
+}
+
+.member__photo{
+    width: 210px;
+    height: 210px;
+    border-radius: 50%;
+    object-fit: cover;
+
+}
+
+.members__container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap:24px;
+    justify-content: space-around;
+}
+
+
+@media (max-width:598px){
+    .tedx__members{
+        font-size: 24px;
+    }
+}
+
+@media (max-width:460px){
+    .tedx__members{
+        font-size: 18px;
+    }
+}
+

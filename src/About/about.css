@@ -1,0 +1,37 @@
+.about__page{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 16px 64px 16px 64px;
+    min-height: 50vh;
+    gap:32px;
+}
+
+
+
+.about__us{
+    max-width: 80vw;
+    width: 80vw;
+}
+
+@media (max-width: 876px) {
+    .about__page{
+        padding:16px;
+        flex-direction: column;
+    }
+
+    .about__us{
+        
+    }
+
+
+}
+
+@media (max-width: 876px) {
+    .about__page{
+        padding:32px;
+    }
+
+}
