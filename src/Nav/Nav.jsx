@@ -1,5 +1,3 @@
-
-
 import { useState } from "react";
 import {
   Navbar,
@@ -17,9 +15,6 @@ import logo from '../assets/tedx.png'
 
 export default function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [data, setData] = useState(null);
-  const [visible, setVisible] = useState(false);
-  const [display, setDisplay] = useState(false);
 
   const [modal, setModal] = useState(false);
 
@@ -31,28 +26,7 @@ export default function App() {
     setModal(!modal);
   };
 
-  if(modal) {
-    document.body.classList.add('active-modal')
-  } else {
-    document.body.classList.remove('active-modal')
-  }
-
-  function getData(event) {
-    let data = event.target.value;
-    setData(data);
-
-    if (data === "TEX4RE8") {
-      setVisible(true);
-      setDisplay(false);
-    } else if (data === "TOL2ER6") {
-      setDisplay(true);
-      setVisible(false);
-    } else {
-      setVisible(false);
-      setDisplay(false);
-    }
-  }
-
+ 
   const menuItems = [{
     name:'PREVIOUS EVENTS',
     link:'/previous'
@@ -97,7 +71,7 @@ export default function App() {
       <div>
       <Link to='/register'>
 
-      <button onClick={toggleModal} className="register__button" style={{marginLeft:'32px'}}>
+      <button  className="register__button" style={{marginLeft:'32px'}}>
          BUY TICKET
       </button>
       </Link>
@@ -105,16 +79,18 @@ export default function App() {
           
       <NavbarMenu className="dropdown__menu" >
         {menuItems.map((item, index) => (
-          <NavbarMenuItem key={`${item}-${index}`}>
+          <NavbarMenuItem key={`${item}-${index}`} >
             <Link
               color={index === 2 ? "primary" : index === menuItems.length - 1 ? "danger" : "foreground"}
-              className="w-full"
               style={{ color: "white" }}
               size="lg"
               to={item.link}
-              onClick={toggleModal}
+              onClick={() => {
+                toggleModal()
+                setIsMenuOpen(false);
+              }}
               >
-              {item.name}
+             <p>{item.name}</p>
             </Link>
           </NavbarMenuItem>
         ))}
@@ -124,4 +100,3 @@ export default function App() {
   </div>
   );
 }
-
