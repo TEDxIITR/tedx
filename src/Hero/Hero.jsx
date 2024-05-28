@@ -147,7 +147,7 @@ function Hero() {
          </div>
        </div>
        <div className='speakers__section'>
-       <p className='see'>Meet our <b style={{color:'#EB0028'}}>Speakers</b></p>
+       <p className='see'>Meet our <b style={{color:'#EB0028'}}>Past Speakers</b></p>
         <div style={{marginTop:'1.5rem'}} className='speaker__parent'>
         {speakers.map((item) => (
           <div  ref= {item.index === 0 ? elementRef : null}  key={item.name} className={` speaker__div ${isVisible ? 'animate__animated animate__zoomIn' : ''}`}>
