@@ -122,116 +122,16 @@ body.active-modal {
     justify-content: space-around;
 }
 
-@media(max-width:1540px){
-    .links{
-        margin-left:870px
+@media (max-width: 768px) {
+    .hide-on-small {
+      display: none;
     }
-}
+  }
 
-
-@media(max-width:1497px){
-    .links{
-        margin-left:800px
+  @media (min-width: 768px) {
+    .hide-on-large {
+      display: none;
     }
-}
-
-@media(max-width:1422px){
-    .links{
-        margin-left:750px
-    }
-}
-
-
-@media(max-width:1388px){
-    .links{
-        margin-left:700px
-    }
-}
-
-@media(max-width:1319px){
-    .links{
-        margin-left:650px
-    }
-}
-
-@media(max-width:1292px){
-    .links{
-        margin-left:600px
-    }
-}
-
-@media(max-width:1224px){
-    .links{
-        margin-left:500px
-    }
-}
-
-
-@media(max-width:1176px){
-    .links{
-        margin-left:450px
-    }
-}
-
-
-@media(max-width:1072px){
-    .links{
-        margin-left:300px
-    }
-}
-
-@media(max-width:1020px){
-    .links{
-        margin-left:100px
-    }
-}
-
-@media(max-width:1020px){
-    .logo__container{
-        min-width: 100px;
-    }
-}
-
-@media(max-width:780px){
-    .links{
-        margin-left:0px
-    }
-}
-
-@media(max-width:676px){
-    .logo__container{
-        min-width: 50px;
-    }
-}
-
-
-@media(max-width:1036px){
-    .links{
-        margin-left:250px
-    }
-}
-
-@media(max-width:996px){
-    .links{
-        margin-left:0px
-    }
-}
-
-
-@media (min-width:640px) {
-    .icon{
-        display: none;
-    }
-
-}
-
-@media (max-width:640px) {
-    .links{
-
-        display: none;
-    }
-
-}
-
+  }
 
 

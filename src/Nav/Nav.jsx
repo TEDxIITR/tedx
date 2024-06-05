@@ -33,6 +33,10 @@ export default function App() {
   },{
     name:'TEAM',
     link:'/team'
+  },
+  {
+    name:'CONTACT US',
+    link:'/contact'
   }
 ];
 
@@ -40,11 +44,11 @@ export default function App() {
     <div>
 
 
-    <Navbar onMenuOpenChange={setIsMenuOpen} className="navbar" >
-      <NavbarContent style={{margin:'0'}}>
+    <Navbar onMenuOpenChange={setIsMenuOpen} className="navbar" maxWidth="full" >
+      <NavbarContent >
         <NavbarMenuToggle
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-          className="sm:hidden icon"
+          className="hide-on-large icon"
         />
         <NavbarBrand>
           <div className="logo__container">
@@ -54,16 +58,21 @@ export default function App() {
           </div>
         </NavbarBrand>
       </NavbarContent>
-      <NavbarContent className="links" justify="center">
-          <NavbarItem className="nav__link">
+      <NavbarContent className="hide-on-small" justify="center">
+          <NavbarItem >
             <Link color="foreground" to="/previous" >
               PREVIOUS EVENTS
             </Link>
           </NavbarItem>
           
-          <NavbarItem className="nav__link">
+          <NavbarItem >
             <Link color="foreground" to="/team" >
               TEAM
+            </Link>
+          </NavbarItem>
+          <NavbarItem >
+            <Link color="foreground" to="/contact" >
+              CONTACT US
             </Link>
           </NavbarItem>
       </NavbarContent>

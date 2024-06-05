@@ -9,6 +9,7 @@ import Footer from './Footer/Foot.jsx';
 import Team from './Team/Team.jsx'
 import About from './About/About.jsx';
 import Register from './Register/Register.jsx';
+import Contact from './Contact/Contact.jsx'
 import './index.css'
 import './normalize.css'
 import '../src/Nav/nav.css'
@@ -18,6 +19,8 @@ import '../src/Event/event.css'
 import '../src/Team/team.css'
 import '../src/About/about.css'
 import '../src/Register/register.css'
+import '../src/Contact/contact.css'
+
 
 const router = createBrowserRouter([
   {
@@ -54,6 +57,14 @@ const router = createBrowserRouter([
     element: <>
       <Nav />
       <Register />
+      <Footer />
+    </>,
+  },
+  {
+    path: "/contact",
+    element: <>
+      <Nav />
+      <Contact />
       <Footer />
     </>,
   },
